@@ -1,0 +1,28 @@
+
+<polymer-element name="linkedin" attributes="lang url position">
+	
+	
+	<template>
+		<div id='linkedin'>
+			123
+		</div>
+	</template>
+	
+	<script>
+		Polymer('linkedin', {
+			lang: 'en_US',
+			url: 'https://github.com/gustavoisensee/linkedin-element',
+			position: 'right',
+			created: function() {
+				//var div = document.getElementById('linkedin');
+				//div.innerHTML = '<span>xaxa</span>';
+				debugger;
+				var span = document.createElement('span'),
+					body = document.getElementsByTagName('body')[0];
+
+				span.innerHTML = 'coco';
+				body.appendChild(span);
+			}
+		});
+	</script>
+</polymer-element>

@@ -2,27 +2,41 @@
 <polymer-element name="linkedin" attributes="lang url position">
 	
 	
+
 	<template>
 		<div id='linkedin'>
-			123
+			***
 		</div>
 	</template>
+	
+	
 	
 	<script>
 		Polymer('linkedin', {
 			lang: 'en_US',
 			url: 'https://github.com/gustavoisensee/linkedin-element',
 			position: 'right',
-			created: function() {
-				//var div = document.getElementById('linkedin');
-				//div.innerHTML = '<span>xaxa</span>';
-				debugger;
-				var span = document.createElement('span'),
-					body = document.getElementsByTagName('body')[0];
+			
+			created: function () {
+				this.createCustomElement();
+			},
 
-				span.innerHTML = 'coco';
-				body.appendChild(span);
+			createCustomElement: function () {
+				var scriptOne = document.createElement('script'),
+					scriptTwo = document.createElement('script'),
+					body = document.body;
+					
+				scriptOne.setAttribute("src", "http://platform.linkedin.com/in.js");
+				scriptOne.setAttribute("type", "text/javascript");
+
+				scriptTwo.setAttribute("type", "IN/Share");
+				scriptTwo.setAttribute("data-url", "https://github.com/gustavoisensee/linkedin-element");
+				scriptTwo.setAttribute("data-counter", "right");
+					
+				body.appendChild(scriptOne);
+				body.appendChild(scriptTwo);
 			}
+
 		});
 	</script>
 </polymer-element>

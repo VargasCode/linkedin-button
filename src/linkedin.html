@@ -1,18 +1,25 @@
 
 <polymer-element name="linkedin" attributes="lang url position">
 
-	<template>
-		<div id="content"></div>
-	</template>
-		
 	<script>
 		Polymer('linkedin', {
 			lang: 'en_US',
 			url: 'https://github.com/gustavoisensee/linkedin-element',
 			position: 'right',
 			created: function () {
-				var element = this.$.content;
-				element.innerHTML = "<h1>teste</h1>";
+				var script = document.createElement('script'),
+					scriptTwo = document.createElement('script'),
+					body = document.body;
+				
+				script.src = "http://platform.linkedin.com/in.js";
+				script.innerHTML = "lang: " + this.lang;
+
+				scriptTwo.type = "IN/Share";
+				scriptTwo.setAttribute("data-url", this.url);
+				scriptTwo.setAttribute("data-counter", this.position);
+				
+				body.appendChild(script);
+				body.appendChild(scriptTwo);
 			}
 
 		});

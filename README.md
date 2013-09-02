@@ -1,40 +1,40 @@
-# &lt;my-element&gt;
+# &lt;linkedin&gt;
 
 TODO: Write a project description
 
-> Maintained by [Your Name](https://github.com/yourname).
+> Maintained by [Gustavo Isensee](https://github.com/gustavoisensee).
 
 ## Demo
 
-> [Check it live](http://customelements.github.io/boilerplate-element).
+> [Check it live](http://gustavoisensee.github.io/linkedin-element).
 
 ## Usage
 
 1. Import Web Components' polyfill:
 
 	```html
-	<script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130711/polymer.min.js"></script>
+	<script src="lib/polymer.min.js"></script>
 	```
 
 2. Import Custom Element:
 
 	```html
-	<link rel="import" href="src/my-element.html">
+	<link rel="import" href="src/linkedin.html">
 	```
 
 3. Start using it!
 
 	```html
-	<my-element></my-element>
+	<linkedin></linkedin>
 	```
 
 ## Options
 
 Attribute  | Options                   | Default             | Description
 ---        | ---                       | ---                 | ---
-`foo`      | *string*                  | `bar`               | Lorem ipsum
-`bar`      | `abc`, `def`, `ghi` 	   | `foo`               | Lorem ipsum
-`height`   | *int*                     | `100`               | Lorem ipsum
+`lang`      | `en_US`, `fr_FR`, `es_ES`, `ru_RU`, `de_DE`, `it_IT`, `pt_BR`, `ro_RO`, `tr_TR`, `ja_JP`, `in_ID`, `ms_MY`, `ko_KR`, `sv_SE`, `cs_CZ`, `nl_NL`, `pl_PL`, `no_NO`, `da_DK`  | `bar`               | language button sharing
+`url`      | `abc`, `def`, `ghi` 	   | `foo`               | url of the site
+`position`   | `top`, `right`, `none ` | `right`               | position counter
 
 
 ## Contributing
@@ -49,6 +49,8 @@ Attribute  | Options                   | Default             | Description
 
 * v0.0.1 August 19, 2013
 	* Started project using [boilerplate-element](https://github.com/customelements/boilerplate-element)
+
+* polymer updated to version 0.0.20130816
 
 ## License
 

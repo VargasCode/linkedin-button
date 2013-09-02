@@ -33,7 +33,7 @@ Web Component wrapper for Linkedin's like button using Polymer.
 Attribute  | Options                   | Default             | Description
 ---        | ---                       | ---                 | ---
 `lang`      | `en_US`, `fr_FR`, `es_ES`, `ru_RU`, `de_DE`, `it_IT`, `pt_BR`, `ro_RO`, `tr_TR`, `ja_JP`, `in_ID`, `ms_MY`, `ko_KR`, `sv_SE`, `cs_CZ`, `nl_NL`, `pl_PL`, `no_NO`, `da_DK`  | `bar`               | language button sharing
-`url`      | `url` 	   | `https://github.com/gustavoisensee`               | url of the site
+`url`      | `url` 	   | `string empty`               | url of the site
 `position`   | `top`, `right`, `none ` | `right`               | position counter
 
 

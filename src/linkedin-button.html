@@ -1,9 +1,9 @@
 
-<polymer-element name="linkedin" attributes="pageLang url position">
+<polymer-element name="linkedin-button" attributes="lang url position">
 
 	<script>
-		Polymer('linkedin', {
-			pageLang: 'en_US',
+		Polymer('linkedin-button', {
+			lang: 'en_US',
 			url: '',
 			position: 'right',
 			created: function () {
@@ -12,7 +12,7 @@
 					body = document.body;
 				
 				script.setAttribute("src", "http://platform.linkedin.com/in.js");
-				script.innerHTML = "lang: " + this.pageLang;
+				script.innerHTML = "lang: " + this.lang;
 
 				scriptTwo.setAttribute("type", "IN/Share");
 				scriptTwo.setAttribute("data-url", this.url);
